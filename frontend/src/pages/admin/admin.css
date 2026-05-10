@@ -1,0 +1,80 @@
+.admin-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.admin-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.add-btn {
+  margin-bottom: 10px;
+  padding: 8px 16px;
+}
+
+.edit-btn {
+  padding: 4px 10px;
+  margin-right: 6px;
+  background: #2563eb;
+  color: white;
+  border: none;
+}
+
+.delete-btn {
+  padding: 4px 10px;
+  background: #ef4444;
+  color: white;
+  border: none;
+}
+
+/* MODAL */
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-box {
+  background: white;
+  padding: 20px;
+  width: 350px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-box input,
+.modal-box textarea {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.save-btn {
+  padding: 8px;
+  background: #16a34a;
+  color: white;
+}
+
+.cancel-btn {
+  padding: 8px;
+  background: #9ca3af;
+  color: white;
+}

@@ -1,0 +1,224 @@
+/* .chatgpt-container {
+  height: 600px;
+  width: 420px;
+  background: #343541;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: Arial;
+}
+
+.chatgpt-messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.msg {
+  margin: 10px 0;
+  display: flex;
+}
+
+.msg.user {
+  justify-content: flex-end;
+}
+
+.msg.bot {
+  justify-content: flex-start;
+}
+
+.bubble {
+  max-width: 75%;
+  padding: 12px 15px;
+  border-radius: 10px;
+  white-space: pre-wrap;
+  font-size: 14px;
+}
+
+.msg.user .bubble {
+  background: #10a37f;
+  color: white;
+}
+
+.msg.bot .bubble {
+  background: #444654;
+  color: white;
+}
+
+.chatgpt-input {
+  display: flex;
+  padding: 10px;
+  background: #40414f;
+}
+
+.chatgpt-input input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background: #343541;
+  color: white;
+}
+
+.chatgpt-input button {
+  margin-left: 8px;
+  background: #10a37f;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+} */
+
+/* Container at bottom right */
+.chatbot-wrapper {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+    font-family: 'Inter', sans-serif;
+}
+
+/* The Floating Button Symbol */
+.chatbot-toggle-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #007bff, #00c6ff);
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+}
+
+.chatbot-toggle-btn:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #ff4757;
+    color: white;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 2px solid white;
+}
+
+/* Chat Window */
+.chatgpt-container {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    width: 380px;
+    height: 550px;
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: slideIn 0.3s ease-out;
+}
+
+.chatgpt-header {
+    background: #1a1a1a;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bot-icon-circle {
+    background: #007bff;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.chatgpt-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.msg {
+    display: flex;
+}
+
+.msg.user { justify-content: flex-end; }
+.msg.bot { justify-content: flex-start; }
+
+.bubble {
+    padding: 10px 15px;
+    border-radius: 18px;
+    max-width: 80%;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.user .bubble {
+    background: #007bff;
+    color: white;
+    border-bottom-right-radius: 2px;
+}
+
+.bot .bubble {
+    background: white;
+    color: #333;
+    border-bottom-left-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.chatgpt-input {
+    padding: 15px;
+    background: white;
+    display: flex;
+    gap: 10px;
+    border-top: 1px solid #eee;
+}
+
+.chatgpt-input input {
+    flex: 1;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    border-radius: 25px;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.send-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.action-icon:hover {
+  opacity: 1 !important;
+  color: #00c6ff;
+  transform: rotate(-15deg);
+  transition: all 0.2s ease;
+}
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(20px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}

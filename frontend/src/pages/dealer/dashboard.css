@@ -1,0 +1,351 @@
+/* ==========================================================================
+   1. CORE WRAPPER & MODERN VARIABLES
+   ========================================================================== */
+:root {
+  --primary-accent: #6366f1;
+  --bg-subtle: #f8fafc;
+  --text-main: #0f172a;
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dashboard-wrapper {
+  overflow-x: hidden;
+  background-color: var(--bg-subtle);
+  color: var(--text-main);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   2. NAVIGATION & INTERACTION
+   ========================================================================== */
+.custom-nav {
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  z-index: 1000;
+}
+
+.brand-logo {
+  font-weight: 800;
+  letter-spacing: -1px;
+  background: linear-gradient(90deg, #6366f1, #a855f7);
+  -webkit-text-fill-color: transparent;
+  transition: var(--transition-smooth);
+}
+
+.menu-trigger {
+  border: 1px solid transparent;
+  transition: var(--transition-smooth);
+}
+
+.menu-trigger:hover {
+  background: #fff !important;
+  border-color: #e2e8f0;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   3. HERO SECTION (GLASSMORPHISM EVOLVED)
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.8)), 
+              url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1470&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  min-height: 400px;
+  border-radius: 0 0 40px 40px; /* Modern curved bottom */
+  margin-bottom: 4rem;
+}
+
+.hero-title {
+  font-weight: 800;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* The Search Box - Clean but sophisticated */
+.no-shadow {
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(16px);
+  padding: 6px;
+  border-radius: 50px !important;
+  transition: var(--transition-smooth);
+}
+
+.no-shadow:focus-within {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  transform: scale(1.02);
+}
+
+.no-shadow input {
+  font-weight: 500;
+  border-radius: 50px 0 0 50px !important;
+  padding-left: 1.5rem !important;
+}
+
+.no-shadow button {
+  border-radius: 50px !important;
+  font-weight: 600;
+  padding: 0.5rem 2rem !important;
+}
+
+/* ==========================================================================
+   4. PRODUCT CARDS
+   ========================================================================== */
+.modern-card {
+  border-radius: 20px !important;
+  border: 1px solid transparent !important;
+  transition: var(--transition-smooth);
+  background: #ffffff;
+}
+
+.modern-card:hover {
+  transform: translateY(-8px);
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* ==========================================================================
+   5. ULTRA ADVANCED CHATBOT UI
+   ========================================================================== */
+.ultra-chat-overlay {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.ultra-chat-toggle {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0052d4, #4364f7);
+  color: white;
+  border: none;
+  box-shadow: 0 10px 25px rgba(67, 100, 247, 0.4);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.ultra-chat-toggle:hover {
+  transform: scale(1.1);
+}
+
+.ultra-chat-window {
+  width: 360px;
+  height: 550px;
+  background: #f8f9fc;
+  border-radius: 24px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-bottom: 20px;
+  animation: slideUp 0.3s ease-out;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.ultra-chat-header {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  padding: 25px 20px 35px 20px;
+  position: relative;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 114, 255, 0.2);
+}
+
+.header-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.bot-avatar-bg {
+  background: white;
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+}
+
+.status-text {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #00e676;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #00e676;
+}
+
+.ultra-chat-body {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #f8f9fc;
+}
+
+.msg-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 85%;
+}
+
+.msg-wrapper.bot { align-self: flex-start; }
+.msg-wrapper.user { align-self: flex-end; }
+
+.msg-bubble {
+  padding: 12px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+  word-wrap: break-word;
+}
+
+.msg-wrapper.bot .msg-bubble {
+  background: white;
+  color: #333;
+  border-bottom-left-radius: 4px;
+}
+
+.msg-wrapper.user .msg-bubble {
+  background: #0072ff;
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.ultra-chat-footer {
+  padding: 15px 20px;
+  background: white;
+  border-top: 1px solid #eee;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  background: #f0f2f5;
+  border-radius: 30px;
+  padding: 5px 5px 5px 20px;
+}
+
+.ultra-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.ultra-send-btn {
+  background: #0072ff;
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.ultra-send-btn:hover { background: #0052d4; }
+
+.typing-dots {
+  display: flex;
+  gap: 4px;
+  padding: 5px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: #bbb;
+  border-radius: 50%;
+  animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.dot:nth-child(1) { animation-delay: -0.32s; }
+.dot:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes bounce {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
+   6. EXTREME MOBILE RESPONSIVENESS
+   ========================================================================== */
+@media (max-width: 480px) {
+  .hero-section {
+    min-height: 280px;
+    border-radius: 0 0 20px 20px;
+    padding: 1.5rem;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  /* Make chatbot full screen on very small mobile screens */
+  .ultra-chat-window {
+    width: 90vw;
+    height: 75vh;
+    right: 5vw;
+    bottom: 90px;
+  }
+}
+
+@media (max-width: 360px) {
+  .no-shadow {
+    background: transparent !important;
+    backdrop-filter: none;
+    border: none !important;
+  }
+  
+  .no-shadow input {
+    border-radius: 12px !important;
+    margin-bottom: 10px;
+    border: 1px solid #e2e8f0 !important;
+  }
+
+  .no-shadow button {
+    width: 100%;
+    border-radius: 12px !important;
+  }
+}

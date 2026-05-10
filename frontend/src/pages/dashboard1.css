@@ -1,0 +1,140 @@
+/* ==========================================================================
+   1. CORE WRAPPER & RESET
+   ========================================================================== */
+.dashboard-wrapper {
+  min-width: 80px; /* Safety floor for extreme responsiveness */
+  overflow-x: hidden;
+  background-color: #f8fafc;
+  color: #1e293b;
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+/* ==========================================================================
+   2. NAVIGATION & SIDEBAR
+   ========================================================================== */
+.custom-nav {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.brand-logo {
+  letter-spacing: -0.5px;
+  transition: opacity 0.2s;
+}
+
+.brand-logo:hover {
+  opacity: 0.8;
+}
+
+.menu-trigger {
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  background: #f1f5f9 !important;
+}
+
+/* Sidebar Search Styling */
+.custom-offcanvas .input-group {
+  border: 1px solid #e2e8f0 !important;
+  background: #f8fafc !important;
+}
+
+/* ==========================================================================
+   3. HERO SECTION (NO SHADOWS)
+   ========================================================================== */
+.hero-section {
+  background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), 
+              url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1470&auto=format&fit=crop');
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+  padding-bottom: 3rem;
+}
+
+.hero-title {
+  font-size: clamp(1.5rem, 6vw, 3.5rem);
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  font-size: clamp(0.9rem, 2vw, 1.25rem);
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+/* Search Box - Shadow Removed */
+.search-box-container {
+  width: 100%;
+  max-width: 550px;
+}
+
+.no-shadow {
+  box-shadow: none !important; /* Explicitly removing the shadow */
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(12px);
+}
+
+.no-shadow input {
+  background: white !important;
+  color: #000 !important;
+}
+
+
+/* ==========================================================================
+   5. FOOTER & EXTREME MOBILE RESPONSIVENESS
+   ========================================================================== */
+.modern-footer {
+  background: #0f172a;
+  border-top: 1px solid #1e293b;
+}
+
+.footer-link-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* BREAKPOINT: Below 360px (Ultra-Small Screens) */
+@media (max-width: 360px) {
+  .hero-section {
+    min-height: 220px;
+    padding: 20px 0;
+  }
+
+  .no-shadow {
+    flex-direction: column;
+    background: transparent !important;
+    border: none !important;
+    backdrop-filter: none;
+  }
+
+  .no-shadow input {
+    width: 100% !important;
+    margin-bottom: 8px;
+    border: 1px solid #ddd !important;
+    border-radius: 25px !important;
+  }
+
+  .no-shadow button {
+    width: 100% !important;
+    border-radius: 25px !important;
+  }
+
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .brand-logo {
+    font-size: 1.1rem !important;
+  }
+}
+
+/* Helper for tiny copyright text */
+.smaller {
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+}
